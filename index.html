@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Fun Flag Quiz for Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Fun Flag Quiz</h1>
+        
+        <!-- Continent Selection -->
+        <div id="continent-selection" class="continent-selection">
+            <h2>Select a Continent</h2>
+            <select id="continent-select" class="continent-select">
+                <option value="All">All Continents</option>
+                <!-- Options will be added by JavaScript -->
+            </select>
+            <button id="start-quiz" class="btn start-btn">Start Quiz</button>
+        </div>
+        
+        <!-- Quiz Interface -->
+        <div id="quiz-interface" class="hidden">
+            <div class="quiz-header">
+                <div id="score">Score: <span id="score-value">0</span></div>
+                <button id="stop-quiz-btn" class="btn stop-btn">Stop Quiz</button>
+                <div id="continent-indicator">Continent: <span id="current-continent">All</span></div>
+            </div>
+            <div id="flag-container">
+                <img id="flag-image" src="" alt="Country Flag">
+            </div>
+            <div id="options" class="options-grid">
+                <!-- Options will be added by JavaScript -->
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-btn" class="btn hidden">Next Flag</button>
+        </div>
+        
+        <!-- Results Screen -->
+        <div id="result" class="hidden">
+            <h2>Quiz Complete!</h2>
+            <p>Your final score is: <span id="final-score">0</span> out of 10</p>
+            <div class="result-actions">
+                <button id="restart-btn" class="btn">Play Again</button>
+                <button id="change-continent-btn" class="btn secondary-btn">Change Continent</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
