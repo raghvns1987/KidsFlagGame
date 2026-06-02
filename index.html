@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Fun Flag Quiz for Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated background decorations -->
+    <div class="bg-shapes">
+        <div class="shape shape-1">⭐</div>
+        <div class="shape shape-2">🌈</div>
+        <div class="shape shape-3">🎈</div>
+        <div class="shape shape-4">✨</div>
+        <div class="shape shape-5">🌍</div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+    </button>
+
+    <div class="container">
+        <h1>🌍 Fun Flag Quiz 🌏</h1>
+        <p class="subtitle">How many flags can you guess? 🤔</p>
+
+        <!-- Continent Selection -->
+        <div id="continent-selection" class="continent-selection card-bounce">
+            <h2>🗺️ Select a Continent</h2>
+            <select id="continent-select" class="continent-select">
+                <option value="All">All Continents</option>
+                <!-- Options will be added by JavaScript -->
+            </select>
+            <button id="start-quiz" class="btn start-btn">🚀 Start Quiz!</button>
+        </div>
+
+        <!-- Quiz Interface -->
+        <div id="quiz-interface" class="hidden">
+            <div class="quiz-header">
+                <div id="score">🎯 Score: <span id="score-value">0</span></div>
+                <div id="streak-display">🔥 Streak: <span id="streak-value">0</span></div>
+                <div id="continent-indicator">🌐 Continent: <span id="current-continent">All</span></div>
+            </div>
+            <div id="flag-container">
+                <img id="flag-image" src="" alt="Country Flag">
+            </div>
+            <div id="options" class="options-grid">
+                <!-- Options will be added by JavaScript -->
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-btn" class="btn hidden">Next Flag ➡️</button>
+            <button id="stop-quiz-btn" class="btn stop-btn">✋ See My Score</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="result" class="hidden card-bounce">
+            <h2>🎉 Great Job, Explorer! 🎉</h2>
+            <div id="final-score"></div>
+            <div class="result-actions">
+                <button id="restart-btn" class="btn">🔄 Play Again</button>
+                <button id="change-continent-btn" class="btn secondary-btn">🗺️ Change Continent</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
